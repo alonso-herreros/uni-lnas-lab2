@@ -14,7 +14,7 @@ h1, h2, h3, h4, h5, h6 {
 h1, h2, .supt1, .supt2, .subt1, .subt2 {
     font-variant: small-caps;
 }
-h1 { text-align: center; }
+h1, h2 { text-align: center; }
 
 .subt2, .supt2 { font-size: 1.2em; }
 .subt3, .supt3 { font-size: 1.1em; }
