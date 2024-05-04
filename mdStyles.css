@@ -32,6 +32,19 @@ h1, h2 { text-align: center; }
 
 p { text-align: justify; }
 
+hr.pagebreak {
+    page-break-after: always;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
 .katex { font-size: 1.05em; }
 
 /* #region Inline and fenced code */
