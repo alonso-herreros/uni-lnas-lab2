@@ -45,10 +45,47 @@ NIA: 100493990
 1. Show that the impedance *seen* on the left by the low pass filter in the following figure is 50 Ω. That is,
    verify that the impedance of the following circuit is 50 Ω.
 
-   ![Amplifier circuit with OpAmp](figures/fig1.1.1.png)
+   ![Amplifier circuit with OpAmp](figures/fig1.1.1.1.png)
 
     What is the insertion *gain* (the inverse of the insertion loss) of the block marked *Amplifier* when we
     connect a $50$ Ω resistor at its output (node `Out`)? Write your answer in dB.
+
+    > The amplifier is set up with *negative feedback*, creating a *virtual short cirtuit* between its
+    > positive and negative terminals. We can use one mesh equation and Ohm's Law to find the impedance seen
+    > by the low pass filter.
+    >
+    > $$
+    > V_g = Iᵢₙ \cdot (R_g + R₁) ⟹ Iᵢₙ = \frac{V_g}{R_g + R₁}\\
+    > Vᵢₙ = V_g - Iᵢₙ R_g = Iᵢₙ R₁ ⟹ \frac{Vᵢₙ}{Iᵢₙ} = R₁ \\
+    > \boxed{Zᵢₙ = \frac{Vᵢₙ}{Iᵢₙ} = R₁ = 50 Ω}
+    > $$
+    >
+    > Then, we can find the insertion gain by calculating ratio of the power at the output of the amplifier to
+    > the power transmitted without the amplifier. First, we'll find the output voltage.
+    >
+    > $$
+    > Iᵢₙ = \frac{Vᵢₙ}{R_g + R₁} \\
+    > Vₒᵤₜ = Iᵢₙ R₁ -Iᵢₙ (R₂ + R₃) = \frac{R₁ - R₂ - R₃}{R_g + R₁} Vᵢₙ
+    > $$
+    >
+    > Then, the power at the output and the power without the amplifier.
+    >
+    > $$
+    > P₂ = \frac{|Vₒᵤₜ|^2}{R_L} = \frac{1}{R_L} \left(\frac{R₁ - R₂ - R₃}{R_g + R₁} Vᵢₙ\right)² \\
+    > P₂₀ = \frac{|V₂₀|^2}{R_L} = \frac{1}{R_L} \left(\frac{R_g}{R_g + R_L} Vᵢₙ\right)² \\
+    > $$
+    >
+    > With that, we can find the insertion gain, which is the inverse of the insertion loss.
+    >
+    > $$
+    > G = \frac{P₂}{P₂₀} = \frac{(R_g + R_L)(R₁ - R₂ - R₃)}{(R_g + R₁) R_g} = - 100
+    > $$
+    >
+    > Finally, we can convert it to decibels the usual way.
+    >
+    > $$
+    > \underline {G_{dB}} = 10 \log |G| = \boxed{20 \text{ dB}}
+    > $$
 
 2. Obtain, by means of circuit analysis, the following properties of the low pass filter used in the circuit
     shown in the [Figure 1](#figure1):
@@ -62,7 +99,7 @@ NIA: 100493990
     (the output impedance of the amplifier), and is loaded on its right by another impedance of $50$ Ω. That
     is, the analysis is that of the following circuit:
 
-    ![Low-pass filter](figures/fig1.1.2.png)
+    ![Low-pass filter](figures/fig1.1.2.1.png)
 
 3. Repeat the previous item for the high pass filter in the circuit of Figure 2.
 
