@@ -54,7 +54,7 @@ NIA: 100493990
     > positive and negative terminals. We can use one mesh equation and Ohm's Law to find the impedance seen
     > by the low pass filter.
     >
-    > $$
+    > $$\\
     > V_g = Iᵢₙ \cdot (R_g + R₁) ⟹ Iᵢₙ = \frac{V_g}{R_g + R₁}\\
     > Vᵢₙ = V_g - Iᵢₙ R_g = Iᵢₙ R₁ ⟹ \frac{Vᵢₙ}{Iᵢₙ} = R₁ \\
     > \boxed{Zᵢₙ = \frac{Vᵢₙ}{Iᵢₙ} = R₁ = 50 Ω}
@@ -63,27 +63,27 @@ NIA: 100493990
     > Then, we can find the insertion gain by calculating ratio of the power at the output of the amplifier to
     > the power transmitted without the amplifier. First, we'll find the output voltage.
     >
-    > $$
+    > $$\\
     > Iᵢₙ = \frac{Vᵢₙ}{R_g + R₁} \\
     > Vₒᵤₜ = Iᵢₙ R₁ -Iᵢₙ (R₂ + R₃) = \frac{R₁ - R₂ - R₃}{R_g + R₁} Vᵢₙ
     > $$
     >
     > Then, the power at the output and the power without the amplifier.
     >
-    > $$
+    > $$\\
     > P₂ = \frac{|Vₒᵤₜ|^2}{R_L} = \frac{1}{R_L} \left(\frac{R₁ - R₂ - R₃}{R_g + R₁} Vᵢₙ\right)² \\
     > P₂₀ = \frac{|V₂₀|^2}{R_L} = \frac{1}{R_L} \left(\frac{R_g}{R_g + R_L} Vᵢₙ\right)² \\
     > $$
     >
     > With that, we can find the insertion gain, which is the inverse of the insertion loss.
     >
-    > $$
+    > $$\\
     > G = \frac{P₂}{P₂₀} = \frac{(R_g + R_L)(R₁ - R₂ - R₃)}{(R_g + R₁) R_g} = - 100
     > $$
     >
     > Finally, we can convert it to decibels the usual way.
     >
-    > $$
+    > $$\\
     > \underline {G_{dB}} = 10 \log |G| = \boxed{20 \text{ dB}}
     > $$
 
