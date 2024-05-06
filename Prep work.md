@@ -111,6 +111,23 @@ NIA: 100493990
     > ⟹ V_L = \frac{Vᵢₙ}{R₃(\frac{1}{R₃} + \frac{1}{R_L} + sC)} ⟹ \\
     > ⟹ \boxed{H(s) = 2 \frac{V_L}{Vᵢₙ} = \frac{2}{R₃(\frac1{R₃} + \frac1{R_L}+sC)} = \frac{6250}{6250+s}}
     > $$
+    >
+    > To find at which frequency the filter attenuates $3$ dB, we'll use the transfer function in terms of
+    > frequency.
+    >
+    > $$\\
+    > α = -10\log |H(jω)|² = 3 \text{ dB} ⟹ |H(jω)|² = 10^{-3/10} ⟹ \\
+    > ⟹ \left|\frac{2}{R₃(\frac1{R₃} + \frac1{R_L}+j2πfC)}\right|² = 10^{-3/10} ⟹ \\
+    > ⟹ \boxed{f = \frac{\sqrt{4⋅10^{0.3}R₃⁻² - \left(R₃⁻¹ + R_L⁻¹\right)²}}{2πC} = 992.36\text{ [Hz]}}
+    > $$
+    >
+    > <!--
+    > $$
+    > 2² = 10^{-3/10} R₃² \left(\left(\frac{1}{R₃} + \frac{1}{R_L}\right)² + (2πC)²f²\right) \\
+    > \frac{4⋅10^{3/10}}{R₃²} - \left(\frac{1}{R₃} + \frac{1}{R_L}\right)² = (2πC)²f² \\
+    > f = \sqrt{\frac{\frac{4⋅10^{3/10}}{R₃²} - \left(\frac{1}{R₃} + \frac{1}{R_L}\right)²}{4π²C²}} = 992.36
+    > $$
+    > -->
 
 3. Repeat the previous item for the high pass filter in the circuit of Figure 2.
 
