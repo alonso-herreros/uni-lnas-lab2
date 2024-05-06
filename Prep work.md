@@ -109,7 +109,7 @@ NIA: 100493990
     > $$\\
     > \frac{Vᵢₙ - V_L}{R_3} = \frac{V_L}{R_L} + sC V_L
     > ⟹ V_L = \frac{Vᵢₙ}{R₃(\frac{1}{R₃} + \frac{1}{R_L} + sC)} ⟹ \\
-    > ⟹ \boxed{H(s) = \frac{V_L}{Vᵢₙ} = \frac{1}{R₃(\frac1{R₃} + \frac{1}{R_L}+sC)} = \frac{3125}{6250 + s}}
+    > ⟹ \boxed{H(s) = 2 \frac{V_L}{Vᵢₙ} = \frac{2}{R₃(\frac1{R₃} + \frac1{R_L}+sC)} = \frac{6250}{6250+s}}
     > $$
 
 3. Repeat the previous item for the high pass filter in the circuit of Figure 2.
