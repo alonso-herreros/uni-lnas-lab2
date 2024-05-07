@@ -142,6 +142,42 @@ NIA: 100493990
 
 3. Repeat the previous item for the high pass filter in the circuit of Figure 2.
 
+    > Since there is still only one reactive element, the filter order is still $\boxed{n = 1}$.
+    >
+    > The high pass filter can be analyzed easily as a voltage divider.
+    >
+    > $$\\
+    > V_L = \frac{R_L}{R₃ + R_L + \frac{1}{sC}} Vᵢₙ = \frac{1}{1 + R_L⁻¹ (R₃ + s⁻¹C⁻¹)} Vᵢₙ ⟹ \\
+    > ⟹ \boxed{H(s) = 2⋅ \frac{V_L}{Vᵢₙ} = \frac{2}{1 + R_L⁻¹ (R₃ + s⁻¹C⁻¹)} = \frac{1}{1 + 6250 s⁻¹}}
+    > $$
+    >
+    > We'll find the frequency at which the filter attenuates $3$ dB ($f_c$) the same way.
+    >
+    > $$\\
+    > α_c = -10\log |H(j2πf_c)|² = 3 \text{ dB} ⟹ |H(j2πf_c)|² = 10^{-3/10} ⟹ \\
+    > ⟹ \left|\frac{2}{1 + R_L⁻¹ (R₃ + (j2πf_c C)⁻¹)}\right|² = 10^{-3/10} ⟹ \\
+    > ⟹ \boxed{f_c = \frac1{2πR_L C\sqrt{4⋅10^{0.3} - (1 + R_L⁻¹R₃)²}} = 997.08 \text{ [Hz]}} \\
+    > $$
+    >
+    > <!-- 
+    > $$\\
+    > 2²⋅10^{0.3} = (1 + R_L⁻¹R₃)² + (2πf_c R_L C)⁻² \\
+    > 4⋅10^{0.3} - (1 + R_L⁻¹R₃)² = (2πf_c R_L C)⁻² \\
+    > 2πf_c R_L C = \frac1{\sqrt{4⋅10^{0.3} - (1 + R_L⁻¹R₃)²}} \\
+    > f_c = \frac1{2πR_L C\sqrt{2²⋅10^{0.3} - (1 + R_L⁻¹R₃)²}} \\
+    > $$
+    > -->
+    >
+    > And finally, we'll evaluate the attenuation at the given frequencies.
+    >
+    > $$
+    > α = -10\log |H(j2πf)|² = -10\log \left|\frac{2}{1 + R_L⁻¹ (R₃ + (j2πf_c C)⁻¹)}\right|² \\
+    > \boxed{\begin{aligned}
+    >     α₁ &= α|_{f=f₁=800 \text{ Hz}} &= 4.06 \text{ [dB]} \\
+    >     α₂ &= α|_{f=f₂=1200 \text{ Hz}} &= 2.27 \text{ [dB]}
+    > \end{aligned}}
+    > $$
+
 4. It is desired to replace the previous filter with a more selective filter. For the new filters, the
    attenuation at one the frequencies must be less than $0.5$ dB, and the attenuation at the other frequency
    must be more then $10$ dB. Plot the specification mask of the new filters and then overlay on it the
