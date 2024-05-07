@@ -170,7 +170,7 @@ NIA: 100493990
     >
     > And finally, we'll evaluate the attenuation at the given frequencies.
     >
-    > $$
+    > $$\\
     > α = -10\log |H(j2πf)|² = -10\log \left|\frac{2}{1 + R_L⁻¹ (R₃ + (j2πf_c C)⁻¹)}\right|² \\
     > \boxed{\begin{aligned}
     >     α₁ &= α|_{f=f₁=800 \text{ Hz}} &= 4.06 \text{ [dB]} \\
