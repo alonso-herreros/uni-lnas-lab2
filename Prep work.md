@@ -185,4 +185,18 @@ NIA: 100493990
    use during the laboratory session to create this graph. (Matlab, Python, Desmos, Geogebra,...)
 
     During the laboratory session, you will design a low-pass filter and a high-pass filter that meets these
-    specifications, characterise it experimentally, and verify that these specifica- tions are indeed met.
+    specifications, characterise it experimentally, and verify that these specifications are indeed met.
+
+    > The plots were made in Python.
+    >
+    > ![Spec mask and current LPF response](figures/fig1.1.4.1.svg)
+    > <p class="caption center">
+    >     Figure 1.1.4.1: Specification mask for the requested low-pass filter and current low-pass filter
+    >     response
+    > </p>
+    >
+    > ![Spec mask and current HPF response](figures/fig1.1.4.2.svg)
+    > <p class="caption center">
+    >     Figure 1.1.4.2: Specification mask for the requested high-pass filter and current high-pass filter
+    >     response
+    > </p>
