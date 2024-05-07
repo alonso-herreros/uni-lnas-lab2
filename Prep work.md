@@ -135,8 +135,8 @@ NIA: 100493990
     > $$\\
     > α = -10\log |H(j2πf)|² = -10\log \left|\frac{2}{1 + R₃(R_L⁻¹ + j2πfC)}\right|² \\
     > \boxed{\begin{aligned}
-    >     α₁ = α|_{f=f₁} = 2.16 \text{ [dB]} \\
-    >     α₂ = α|_{f=f₂} = 3.90 \text{ [dB]}
+    >     α₁ = α|_{f=f₁=800 \text{ Hz}} = 2.16 \text{ [dB]} \\
+    >     α₂ = α|_{f=f₂=1200 \text{ Hz}} = 3.90 \text{ [dB]}
     > \end{aligned}}
     > $$
 
