@@ -208,9 +208,32 @@ NIA: 100493990
 ### 1.2. S1 Lab work: Design and characterization of a new low-pass filter
 
 1. Check the results obtained in the previous work using the Falstad simulator
+
+    > The theoretically calculated frequencies were checked by recreating the circuit in Falstad and
+    > setting the input frequency to this value. The power values were taken from the average power
+    > measurement. If the power at the output is half the max power (or $10^{-0.3}$ times, to be exact),
+    > then the theoretical frequency is considered to be correct.
+    >
+    > $$
+    > Pₘₐₓ = \frac{|V_g|²}{8⋅R_g} = 0.25 \text{ [W]} \\
+    > P₂ = Pₘₐₓ ⋅ 10^{-3/10} = 0.1253 \text{ [W]}
+    > $$
+
     * (a) Check, by means of a Falstad simulation, the value of the frequency at which the low pass filter
       characterized in the previous work attenuates 3 dB. Take a screenshot of your measurement and explain
       how you have verified the result.
+
+        > For the low-pass filter, the frequency was found to be $992.36 \text{ Hz}$. The Falstad simulator
+        > proved this to be correct, as seen in the following screenshots (link to Falstad in the images).
+        >
+        > [![LPF at 992.36 Hz](figures/fig1.2.1.a_dark.png)](https://t.ly/TSJgD)
+        > <p class="caption center">
+        > Figure 1.2.1.a.2: Falstad simulation of the low-pass filter at the theoretically calculated
+        > frequency
+        > </p>
+        >
+        > As the screenshot shows, the average power is $125.3 \text{ mW}$, just as expected.
+
     * (b) Same as in the previous section, but with the high pass filter.
 
 2. Design the low pass filter whose specification mask you have obtained in the preparatory work.
