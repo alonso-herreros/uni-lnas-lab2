@@ -228,13 +228,22 @@ NIA: 100493990
         >
         > [![LPF at 992.36 Hz](figures/fig1.2.1.a_dark.png)](https://t.ly/TSJgD)
         > <p class="caption center">
-        > Figure 1.2.1.a.2: Falstad simulation of the low-pass filter at the theoretically calculated
-        > frequency
+        > Figure 1.2.1.a: Falstad simulation of the low-pass filter at the theoretically calculated frequency
         > </p>
         >
         > As the screenshot shows, the average power is $125.3 \text{ mW}$, just as expected.
 
     * (b) Same as in the previous section, but with the high pass filter.
+
+        > In the case of the high-pass filter, the frequency was found to be $997.08 \text{ Hz}$. The Falstad
+        > simulator showed the following results:
+        >
+        > [![HPF at 997.08 Hz](figures/fig1.2.1.b.png)](https://t.ly/O-js5)
+        > <p class="caption center">
+        > Figure 1.2.1.b: Falstad simulation of the high-pass filter at the theoretically calculated frequency
+        > </p>
+        >
+        > Again, the average power was $125.3 \text{ mW}$, confirming the theoretical frequency.
 
 2. Design the low pass filter whose specification mask you have obtained in the preparatory work.
     * (a) Determine the type and order of the approximation to be used.
