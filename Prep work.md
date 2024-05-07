@@ -200,3 +200,50 @@ NIA: 100493990
     >     Figure 1.1.4.2: Specification mask for the requested high-pass filter and current high-pass filter
     >     response
     > </p>
+
+### 1.2. S1 Lab work: Design and characterization of a new low-pass filter
+
+1. Check the results obtained in the previous work using the Falstad simulator
+    * (a) Check, by means of a Falstad simulation, the value of the frequency at which the low pass filter
+      characterized in the previous work attenuates 3 dB. Take a screenshot of your measurement and explain
+      how you have verified the result.
+    * (b) Same as in the previous section, but with the high pass filter.
+
+2. Design the low pass filter whose specification mask you have obtained in the preparatory work.
+    * (a) Determine the type and order of the approximation to be used.
+    * (b) Obtain the filter implementation (take screenshots and explain the mesurements at each step):
+        * Select a prototype of the tables. Check the prototype response at $\bar{ω} = 1 \text{ rad/s}$. In
+          order to display such low frequency signals, you will need to increase the value of the `Time step
+          size` in `Other options`. (In general this parameter should be between 100 and 10000 times smaller
+          than the period of the signal).
+        * Denormalise impedances and check that the transfer function does not change. Do the voltages change?
+          And the currents?
+        * Apply the denormalisation on the frequency axis to the circuit, and check that the measurement does
+          not change if it is now measured at the corresponding scaled frequency. (Do not forget to reset the
+          `Time step size`.) Use a normalization frequency that allows you to meet specifications loosely in
+          both the passband and the attenuated band.
+
+3. Use low-pass to high-pass transformation $s = \frac{ω₀²}{p}$ to transform the low pass filter designed in
+   the previous section into a high pass filter whose attenuation at $800 \text{ Hz}$ and $1200 \text{ Hz}$
+   match the attenuation of the low pass filter at $800 \text{ Hz}$ and $1200 \text{ Hz}$ respectively. Obtain
+   the high pass filter and verify the requirements.
+
+4. Calculate and plot on the specification mask the amplitude response of the original low- pass filter and
+   high-pass filters, and the new designed low-pass filter and high-pass filters(to make this plot, use the
+   computer procedure you had to prepare in the preliminary work).
+
+5. Characterise the designed filters (Low-pass and high-pass) using the circuit simulator, taking measurements
+   of the filter response (**only in modulus**) at significant points on the frequency axis. Add the
+   measurements to the plot made in the previous paragraph and check the correspondence. Note that since you
+   are using a simulator, you can measure several frequencies simultaneously. Simply copy and paste the
+   circuit. Do not forget to include the screenshots.
+
+6. Use the filters that you have just designed in the circuit shown [here][circuit_1.2.6], where the symbols
+   transmitted in an FSK signal are detected by comparing the output of the high pass filter and the low pass
+   filter.
+    * Compare the result obtained at nodes `FL` and `FH` with the original filters and the new filters.
+      Explain the result.
+    * Compare the result obtained in the `RX signal` node. Explain the result.
+
+[circuit_1.2.6]:
+https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcAWAbNAHJMCDMCxUB2DDAJg1RD2usmoFMBaMMAKACUQzl78zwqPggH0IWMVCkwEnbr25EBhemSVSIYMnHBTc0MMhwBOMqjwIMxosdxRoslSGS4BrvrirvpB8PH-wbADuILiQyIpunqHhUMExEfyh0bjRkGxgpNxZLm7azq5+fmKuqFYICKhUTMYIaHBaVAjGrJCkREgY8bgYEWiJvclU6VwUGAUCPPS5upM6ZA7ci-Qy8TPezXkrbABO8qrqYRFqonS7+6EiCZenCOnaRKGD-RPOqH0gAEIAlgB2AIY7ACeAB0AM5g74AcwBABs2ABjPwKMCmcBaMRolawfyEULQXBEOAYMBEFw4QktOJ7VhXVHKHCTSpSO5sKEgDCFJKctyDbb-Dlc6ItKJUcY4EAsJBgAL0JgwXGeVKosCpZBYIio8ZiALnHnZcYig0suDxfVjQVbOIhI0Wo2pYbxVVo7Ti5DM11xJHOubi3Au5nY-zNYyhsPh8NIGBEyBkBBEYjhQzIMyPBXYNngf1Mqg+yLSTN5mZF9UF73Zp4RIuFIPwEMRhuh6XQMwy2wUYwYESEYz2BpOis9Kvurx8tgAEyzFG4bSzLtnAnHDAAZv8AK6wgAu51pbjK6KuM3orO9kEO+5l6iPff873A0DKd14GE18bK5Cj51M4rRMtn9JNHdiVCfdvxA7UzhCP9xk8cUzz3bUnXg8CDwQ610XyADd3ALEkP-X9wkxURC2Q4tSNLbZ2Ww4tGWcCi4io2i41zJj1H5cAeHGT1VWnT1ewlKVin8SUwBxVJNTUVgyB6MgIBYMSelVcJOXMVw7D-QIoNcLj-207hAwHXjmS0UtmPQkyuJ4DjTIMqDaKw7QiPM2jYI4nRXPSKDOOcHQLNeTyp3GYtvKPQyYMGHigprNgBT8odAsrEB+KQQSNPge9H1jXhZIdKpfwfLtCJfHAE1IOMhNNSdIsSvN4sXFd1y3PUuXyDorWPALNlCVqrm8AL7WFacHXQsDhtG-d+qGwaf2I2Kn2NHBBgtcURIqnRozgOMEyJIxkBTYh71bSB2ysLtZNQfjdQeV5vBmKZnBAAAxABlABpNhroxJyvpQD5HoACQ+s9wHm7j5uTB6AAV2E++b4pwWJkGMKgIkhsggceH7XKx-IIkegAZDGQaWrJCEKC0Ig4AANcFIRhf54Sg0H-1BtinThiK4didIaRHGq+evVkqIFwpDGZPaIPSYWPWMvmTgLXmPX-OXA0glAlfFZnEKZ2J4b5+L0gAI2KN0q0MVQriNk2hnRf1nE1OIAA8-B6LNpTaXNXeOCJ-shx62GdmV3WoGU-CsEO7G9kB8b9p1HJw5RvIAgKsYvbyPLYY2tEMcB1EMYxVGRuIs9kx5cDQFBbHt7ZA7INEkcxlxHjuaZwHGABRX4ADcGFhAB7AAHBhwSXTcGARTc+52AOOJfEHc2LZoHsyEBO57-uh5Hhgx4nqe2CAA
