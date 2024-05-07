@@ -128,6 +128,17 @@ NIA: 100493990
     > f = \sqrt{\frac{\frac{4⋅10^{3/10}}{R₃²} - \left(\frac{1}{R₃} + \frac{1}{R_L}\right)²}{4π²C²}} = 992.36
     > $$
     > -->
+    >
+    > The attenuation at the given frequencies can be found by evaluating the expression of the attenuation at
+    > those frequencies
+    >
+    > $$\\
+    > α = -10\log |H(j2πf)|² = -10\log \left|\frac{2}{1 + R₃(R_L⁻¹ + j2πfC)}\right|² \\
+    > \boxed{\begin{aligned}
+    >     α₁ = α|_{f=f₁} = 2.16 \text{ [dB]} \\
+    >     α₂ = α|_{f=f₂} = 3.90 \text{ [dB]}
+    > \end{aligned}}
+    > $$
 
 3. Repeat the previous item for the high pass filter in the circuit of Figure 2.
 
