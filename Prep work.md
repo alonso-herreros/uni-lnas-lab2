@@ -106,7 +106,8 @@ NIA: 100493990
     > From simple observation that there is only one reactive element in the filter, we can assert that the
     > filter order is $\boxed{n = 1}$.
     >
-    > The transfer function can be obtained using node analysis.
+    > The transfer function can be obtained using node analysis and the definition of the transfer function
+    > with matched impedances, $H = 2\frac{V_L}{Vᵢₙ}$.
     >
     > $$\\
     > \frac{Vᵢₙ - V_L}{R_3} = \frac{V_L}{R_L} + sC V_L
@@ -146,7 +147,8 @@ NIA: 100493990
 
     > Since there is still only one reactive element, the filter order is still $\boxed{n = 1}$.
     >
-    > The high pass filter can be analyzed easily as a voltage divider.
+    > The high pass filter can be analyzed easily as a voltage divider and the same transfer function
+    > definition as before.
     >
     > $$\\
     > V_L = \frac{R_L}{R₃ + R_L + \frac{1}{sC}} Vᵢₙ = \frac{1}{1 + R_L⁻¹ (R₃ + s⁻¹C⁻¹)} Vᵢₙ ⟹ \\
