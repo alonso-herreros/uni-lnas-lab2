@@ -78,13 +78,13 @@ NIA: 100493990
     > With that, we can find the insertion gain, which is the inverse of the insertion loss.
     >
     > $$\\
-    > G = \frac{P₂}{P₂₀} = \frac{(R_g + R_L)(R₁ - R₂ - R₃)}{(R_g + R₁) R_g} = - 100
+    > G_I = \frac{P₂}{P₂₀} = \left(\frac{(R_g + R_L)(R₁ - R₂ - R₃)}{(R_g + R₁) R_g}\right)² = 100
     > $$
     >
     > Finally, we can convert it to decibels the usual way.
     >
     > $$\\
-    > \underline {G_{dB}} = 10 \log |G| = \boxed{20 \text{ dB}}
+    > \boxed{G_{I\,[dB]} = 10 \log |G| = 20 \text{ dB}}
     > $$
 
 2. Obtain, by means of circuit analysis, the following properties of the low pass filter used in the circuit
@@ -112,13 +112,13 @@ NIA: 100493990
     > ⟹ \boxed{H(s) = 2 \frac{V_L}{Vᵢₙ} = \frac{2}{R₃(\frac1{R₃} + \frac1{R_L}+sC)} = \frac{6250}{6250+s}}
     > $$
     >
-    > To find at which frequency the filter attenuates $3$ dB, we'll use the transfer function in terms of
-    > frequency.
+    > To find at which frequency $f_c$ the filter attenuates $3$ dB, we'll use the transfer function in terms
+    > of frequency.
     >
     > $$\\
-    > α = -10\log |H(jω)|² = 3 \text{ dB} ⟹ |H(jω)|² = 10^{-3/10} ⟹ \\
-    > ⟹ \left|\frac{2}{R₃(\frac1{R₃} + \frac1{R_L}+j2πfC)}\right|² = 10^{-3/10} ⟹ \\
-    > ⟹ \boxed{f = \frac{\sqrt{4⋅10^{0.3}R₃⁻² - \left(R₃⁻¹ + R_L⁻¹\right)²}}{2πC} = 992.36\text{ [Hz]}}
+    > α = -10\log |H(j2πf_c)|² = 3 \text{ dB} ⟹ |H(j2πf_c)|² = 10^{-3/10} ⟹ \\
+    > ⟹ \left|\frac{2}{R₃(\frac1{R₃} + \frac1{R_L}+j2πf_c C)}\right|² = 10^{-3/10} ⟹ \\
+    > ⟹ \boxed{f_c = \frac{\sqrt{4⋅10^{0.3}R₃⁻² - \left(R₃⁻¹ + R_L⁻¹\right)²}}{2πC} = 992.36\text{ [Hz]}}
     > $$
     >
     > <!--
@@ -135,12 +135,12 @@ NIA: 100493990
     > $$\\
     > α = -10\log |H(j2πf)|² = -10\log \left|\frac{2}{1 + R₃(R_L⁻¹ + j2πfC)}\right|² \\
     > \boxed{\begin{aligned}
-    >     α₁ = α|_{f=f₁=800 \text{ Hz}} = 2.16 \text{ [dB]} \\
-    >     α₂ = α|_{f=f₂=1200 \text{ Hz}} = 3.90 \text{ [dB]}
+    >     α₁ &= α|_{f=f₁=800 \text{ Hz}} &= 2.16 \text{ [dB]} \\
+    >     α₂ &= α|_{f=f₂=1200 \text{ Hz}} &= 3.90 \text{ [dB]}
     > \end{aligned}}
     > $$
 
-3. Repeat the previous item for the high pass filter in the circuit of Figure 2.
+3. Repeat the previous item for the high pass filter in the circuit of [Figure 2](#figure2).
 
     > Since there is still only one reactive element, the filter order is still $\boxed{n = 1}$.
     >
