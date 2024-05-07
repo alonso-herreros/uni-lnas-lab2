@@ -114,13 +114,13 @@ NIA: 100493990
     > ⟹ \boxed{H(s) = 2 \frac{V_L}{Vᵢₙ} = \frac{2}{R₃(\frac1{R₃} + \frac1{R_L}+sC)} = \frac{6250}{6250+s}}
     > $$
     >
-    > To find at which frequency $f_c$ the filter attenuates $3$ dB, we'll use the transfer function in terms
-    > of frequency.
+    > To find at which frequency the filter attenuates $3$ dB, we'll use the transfer function in terms of
+    > frequency.
     >
     > $$\\
-    > α = -10\log |H(j2πf_c)|² = 3 \text{ dB} ⟹ |H(j2πf_c)|² = 10^{-3/10} ⟹ \\
-    > ⟹ \left|\frac{2}{R₃(\frac1{R₃} + \frac1{R_L}+j2πf_c C)}\right|² = 10^{-3/10} ⟹ \\
-    > ⟹ \boxed{f_c = \frac{\sqrt{4⋅10^{0.3}R₃⁻² - \left(R₃⁻¹ + R_L⁻¹\right)²}}{2πC} = 992.36\text{ [Hz]}}
+    > α = -10\log |H(j2πf)|² = 3 \text{ dB} ⟹ |H(j2πf)|² = 10^{-3/10} ⟹ \\
+    > ⟹ \left|\frac{2}{R₃(\frac1{R₃} + \frac1{R_L}+j2πf C)}\right|² = 10^{-3/10} ⟹ \\
+    > ⟹ \boxed{f = \frac{\sqrt{4⋅10^{0.3}R₃⁻² - \left(R₃⁻¹ + R_L⁻¹\right)²}}{2πC} = 992.36\text{ [Hz]}}
     > $$
     >
     > <!--
@@ -153,27 +153,27 @@ NIA: 100493990
     > ⟹ \boxed{H(s) = 2⋅ \frac{V_L}{Vᵢₙ} = \frac{2}{1 + R_L⁻¹ (R₃ + s⁻¹C⁻¹)} = \frac{1}{1 + 6250 s⁻¹}}
     > $$
     >
-    > We'll find the frequency at which the filter attenuates $3$ dB ($f_c$) the same way.
+    > We'll find the frequency at which the filter attenuates $3$ dB the same way.
     >
     > $$\\
-    > α_c = -10\log |H(j2πf_c)|² = 3 \text{ dB} ⟹ |H(j2πf_c)|² = 10^{-3/10} ⟹ \\
-    > ⟹ \left|\frac{2}{1 + R_L⁻¹ (R₃ + (j2πf_c C)⁻¹)}\right|² = 10^{-3/10} ⟹ \\
-    > ⟹ \boxed{f_c = \frac1{2πR_L C\sqrt{4⋅10^{0.3} - (1 + R_L⁻¹R₃)²}} = 997.08 \text{ [Hz]}} \\
+    > α_c = -10\log |H(j2πf)|² = 3 \text{ dB} ⟹ |H(j2πf)|² = 10^{-3/10} ⟹ \\
+    > ⟹ \left|\frac{2}{1 + R_L⁻¹ (R₃ + (j2πf C)⁻¹)}\right|² = 10^{-3/10} ⟹ \\
+    > ⟹ \boxed{f = \frac1{2πR_L C\sqrt{4⋅10^{0.3} - (1 + R_L⁻¹R₃)²}} = 997.08 \text{ [Hz]}} \\
     > $$
     >
     > <!-- 
     > $$\\
-    > 2²⋅10^{0.3} = (1 + R_L⁻¹R₃)² + (2πf_c R_L C)⁻² \\
-    > 4⋅10^{0.3} - (1 + R_L⁻¹R₃)² = (2πf_c R_L C)⁻² \\
-    > 2πf_c R_L C = \frac1{\sqrt{4⋅10^{0.3} - (1 + R_L⁻¹R₃)²}} \\
-    > f_c = \frac1{2πR_L C\sqrt{2²⋅10^{0.3} - (1 + R_L⁻¹R₃)²}} \\
+    > 2²⋅10^{0.3} = (1 + R_L⁻¹R₃)² + (2πf R_L C)⁻² \\
+    > 4⋅10^{0.3} - (1 + R_L⁻¹R₃)² = (2πf R_L C)⁻² \\
+    > 2πf R_L C = \frac1{\sqrt{4⋅10^{0.3} - (1 + R_L⁻¹R₃)²}} \\
+    > f = \frac1{2πR_L C\sqrt{2²⋅10^{0.3} - (1 + R_L⁻¹R₃)²}} \\
     > $$
     > -->
     >
     > And finally, we'll evaluate the attenuation at the given frequencies.
     >
     > $$\\
-    > α = -10\log |H(j2πf)|² = -10\log \left|\frac{2}{1 + R_L⁻¹ (R₃ + (j2πf_c C)⁻¹)}\right|² \\
+    > α = -10\log |H(j2πf)|² = -10\log \left|\frac{2}{1 + R_L⁻¹ (R₃ + (j2πf C)⁻¹)}\right|² \\
     > \boxed{\begin{aligned}
     >     α₁ &= α|_{f=f₁=800 \text{ Hz}} &= 4.06 \text{ [dB]} \\
     >     α₂ &= α|_{f=f₂=1200 \text{ Hz}} &= 2.27 \text{ [dB]}
