@@ -50,6 +50,8 @@ NIA: 100493990
     What is the insertion *gain* (the inverse of the insertion loss) of the block marked *Amplifier* when we
     connect a $50$ Ω resistor at its output (node `Out`)? Write your answer in dB.
 
+    <!-- https://tinyurl.com/4ccavhxj -->
+
     > The amplifier is set up with *negative feedback*, creating a *virtual short cirtuit* between its
     > positive and negative terminals. We can use one mesh equation and Ohm's Law to find the impedance seen
     > by the low pass filter.
