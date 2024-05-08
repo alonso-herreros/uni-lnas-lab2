@@ -425,6 +425,44 @@ NIA: 100493990
    are using a simulator, you can measure several frequencies simultaneously. Simply copy and paste the
    circuit. Do not forget to include the screenshots.
 
+    > The measurements were done simultaneously for the low-pass and high-pass filters in the Falstad
+    > simulator, getting 7 points for each filter. The results can be seen in the following screenshot:
+    >
+    > [![Figure 1.2.5.1](figures/fig1.2.5.1.png)](https://tinyurl.com/2yenz3sy)
+    >
+    > These results were tabulated and processed to acquire the attenuation values:
+    >
+    > | $f$ (Hz) |       $P (W)$       | $α$ (dB) |
+    > | :------: | :-----------------: | :------: |
+    > | $200.0$  | $2.369 \text{ mW}$  |  $0.23$  |
+    > | $400.0$  | $2.229 \text{ mW}$  |  $0.50$  |
+    > | $700.0$  | $2.498 \text{ mW}$  |  $0.00$  |
+    > | $800.0$  | $2.228 \text{ mW}$  |  $0.50$  |
+    > | $1000.0$ | $830.07 \text{ μW}$ |  $4.79$  |
+    > | $1200.0$ | $229.50 \text{ μW}$ | $10.37$  |
+    > | $1400.0$ | $75.75 \text{ μW}$  | $15.19$  |
+    >
+    > The results were plotted in a copy of the previous plot, showing the correspondence between the
+    > theoretical and simulated values.
+    >
+    > ![Figure 1.2.5.2](figures/fig1.2.5.2.svg)
+    >
+    > The same procedure was done for the high-pass filter, with the following results:
+    >
+    > [![Figure 1.2.5.3](figures/fig1.2.5.3.png)](https://tinyurl.com/22578g8a)
+    >
+    > | $f$ (Hz) |       $P (W)$       | $α$ (dB) |
+    > | :------: | :-----------------: | :------: |
+    > | $700.0$  | $87.70 \text{ μW}$  | $14.55$  |
+    > | $800.0$  | $229.78 \text{ μW}$ | $10.37$  |
+    > | $1000.0$ | $1.068 \text{ mW}$  |  $3.69$  |
+    > | $1200.0$ | $2.227 \text{ mW}$  |  $0.50$  |
+    > | $1400.0$ | $2.497 \text{ mW}$  |  $0.00$  |
+    > | $1600.0$ | $2.407 \text{ mW}$  |  $0.17$  |
+    > | $2000.0$ | $2.261 \text{ mW}$  |  $0.44$  |
+    >
+    > ![Figure 1.2.5.4](figures/fig1.2.5.4.svg)
+
 6. Use the filters that you have just designed in the circuit shown [here][circuit_1.2.6], where the symbols
    transmitted in an FSK signal are detected by comparing the output of the high pass filter and the low pass
    filter.
