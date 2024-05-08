@@ -468,7 +468,30 @@ NIA: 100493990
    filter.
     * Compare the result obtained at nodes `FL` and `FH` with the original filters and the new filters.
       Explain the result.
+
+        > The original signals at nodes `FL` and `FH` did not have a lot of contrast between the high and the
+        > low states, as we can see in the following screenshot.
+        >
+        > ![Figure 1.2.6.1](figures/fig1.2.6.1.png)
+        > <p class="caption center">
+        > Figure 1.2.6.1: Original signals at nodes `FL` and `FH`
+        > </p>
+        >
+        > With the new filters, we can see that these signals clearly show a difference between high and low
+        > state.
+        >
+        > [![Figure 1.2.6.2](figures/fig1.2.6.2.png)](https://tinyurl.com/25uvfrcx)
+        > <p class="caption center">
+        > Figure 1.2.6.2: New signals at nodes `FL` and `FH` with improved filters
+        > </p>
+
     * Compare the result obtained in the `RX signal` node. Explain the result.
+
+        > Even though the signals at `FL` and `FH` are now more clearly defined, the signal at `RX signal` is
+        > unchanged, as the screenshot shows. The initial filters were good enough for this application at the
+        > defined frequencies. If the frequencies were closer, the improved filters may have been necessary.
+        >
+        > ![Figure 1.2.6.3](figures/fig1.2.6.3.png)
 
 [circuit_1.2.6]:
 https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcAWAbNAHJMCDMCxUB2DDAJg1RD2usmoFMBaMMAKACUQzl78zwqPggH0IWMVCkwEnbr25EBhemSVSIYMnHBTc0MMhwBOMqjwIMxosdxRoslSGS4BrvrirvpB8PH-wbADuILiQyIpunqHhUMExEfyh0bjRkGxgpNxZLm7azq5+fmKuqFYICKhUTMYIaHBaVAjGrJCkREgY8bgYEWiJvclU6VwUGAUCPPS5upM6ZA7ci-Qy8TPezXkrbABO8qrqYRFqonS7+6EiCZenCOnaRKGD-RPOqH0gAEIAlgB2AIY7ACeAB0AM5g74AcwBABs2ABjPwKMCmcBaMRolawfyEULQXBEOAYMBEFw4QktOJ7VhXVHKHCTSpSO5sKEgDCFJKctyDbb-Dlc6ItKJUcY4EAsJBgAL0JgwXGeVKosCpZBYIio8ZiALnHnZcYig0suDxfVjQVbOIhI0Wo2pYbxVVo7Ti5DM11xJHOubi3Au5nY-zNYyhsPh8NIGBEyBkBBEYjhQzIMyPBXYNngf1Mqg+yLSTN5mZF9UF73Zp4RIuFIPwEMRhuh6XQMwy2wUYwYESEYz2BpOis9Kvurx8tgAEyzFG4bSzLtnAnHDAAZv8AK6wgAu51pbjK6KuM3orO9kEO+5l6iPff873A0DKd14GE18bK5Cj51M4rRMtn9JNHdiVCfdvxA7UzhCP9xk8cUzz3bUnXg8CDwQ610XyADd3ALEkP-X9wkxURC2Q4tSNLbZ2Ww4tGWcCi4io2i41zJj1H5cAeHGT1VWnT1ewlKVin8SUwBxVJNTUVgyB6MgIBYMSelVcJOXMVw7D-QIoNcLj-207hAwHXjmS0UtmPQkyuJ4DjTIMqDaKw7QiPM2jYI4nRXPSKDOOcHQLNeTyp3GYtvKPQyYMGHigprNgBT8odAsrEB+KQQSNPge9H1jXhZIdKpfwfLtCJfHAE1IOMhNNSdIsSvN4sXFd1y3PUuXyDorWPALNlCVqrm8AL7WFacHXQsDhtG-d+qGwaf2I2Kn2NHBBgtcURIqnRozgOMEyJIxkBTYh71bSB2ysLtZNQfjdQeV5vBmKZnBAAAxABlABpNhroxJyvpQD5HoACQ+s9wHm7j5uTB6AAV2E++b4pwWJkGMKgIkhsggceH7XKx-IIkegAZDGQaWrJCEKC0Ig4AANcFIRhf54Sg0H-1BtinThiK4didIaRHGq+evVkqIFwpDGZPaIPSYWPWMvmTgLXmPX-OXA0glAlfFZnEKZ2J4b5+L0gAI2KN0q0MVQriNk2hnRf1nE1OIAA8-B6LNpTaXNXeOCJ-shx62GdmV3WoGU-CsEO7G9kB8b9p1HJw5RvIAgKsYvbyPLYY2tEMcB1EMYxVGRuIs9kx5cDQFBbHt7ZA7INEkcxlxHjuaZwHGABRX4ADcGFhAB7AAHBhwSXTcGARTc+52AOOJfEHc2LZoHsyEBO57-uh5Hhgx4nqe2CAA
