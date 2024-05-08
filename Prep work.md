@@ -348,6 +348,50 @@ NIA: 100493990
    match the attenuation of the low pass filter at $800 \text{ Hz}$ and $1200 \text{ Hz}$ respectively. Obtain
    the high pass filter and verify the requirements.
 
+    > The frequency $ωₚ$ will be moved from $2π⋅800 \text{ rad/s}$ to $2π⋅1200 \text{ rad/s}$, while the
+    > atttenuation values will be kept the same. Both frequencies, $fₐ = 800 \text{ Hz}$ and $fₚ = 1200 \text{
+    > Hz}$, will be simulated in Falstad to check the filter response and checked against the corresponding
+    > frequencies in the low-pass filter. First, we'll check the low-pass filter output power at $800 \text{
+    > Hz}$:
+    >
+    > [![Figure 1.2.3.0](figures/fig1.2.3.0.png)](https://t.ly/DAGXT)
+    > <p class="caption center">
+    > Figure 1.2.3.0: Low-pass filter response at $1200 \text{ Hz}$
+    > </p>
+    >
+    > We got a value close to $229.63 \text{ μW}$. Next, we'll design the new filter. The lowpass-highpass
+    > transformation is as follows:
+    >
+    > $$
+    > ω₀ = \sqrt{ωₚ ωₚ'} = 2π⋅\sqrt{960000} \\
+    > \begin{cases}
+    >     L → C' = \frac{1}{ω₀² L} \\
+    >     C → L' = \frac{1}{ω₀² C} \\
+    > \end{cases}
+    > $$
+    >
+    > This means swapping capacitors for inductors and vice-versa. The new circuit and values can be seen in
+    > the Falstad simulation screenshot (Figure 1.2.3.1). We'll check the power values against those obtained
+    > with the low-pass filter.
+    >
+    > [![Figure 1.2.3.1](figures/fig1.2.3.1.png)](https://t.ly/ybyqE)
+    > <p class="caption center">
+    > Figure 1.2.3.1: Falstad simulation of the high-pass filter at 1200 Hz
+    > </p>
+    >
+    > This power value of $2.2278 \text{ mW}$ is essentially the same as the one obtained with the low-pass
+    > filter at $800 \text{ Hz}$ (close to $2.2278 \text{ mW}$ as well), as expected. We'll now check the
+    > power at $800 \text{ Hz}$:
+    >
+    > [![Figure 1.2.3.2](figures/fig1.2.3.2.png)](https://t.ly/LETG2)
+    > <p class="caption center">
+    > Figure 1.2.3.2: Falstad simulation of the high-pass filter at 800 Hz
+    > </p>
+    >
+    > As before, this power value $229.67 \text{ μW}$ is essentially the same as the one obtained with the
+    > low-pass filter at $1200 \text{ Hz}$ (close to $229.63 \text{ μW}$), confirming the correct design of
+    > the high-pass filter.
+
 4. Calculate and plot on the specification mask the amplitude response of the original low- pass filter and
    high-pass filters, and the new designed low-pass filter and high-pass filters(to make this plot, use the
    computer procedure you had to prepare in the preliminary work).
