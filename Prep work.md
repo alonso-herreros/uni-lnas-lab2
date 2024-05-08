@@ -266,12 +266,82 @@ NIA: 100493990
           order to display such low frequency signals, you will need to increase the value of the `Time step
           size` in `Other options`. (In general this parameter should be between 100 and 10000 times smaller
           than the period of the signal).
+
+        > We'll use the following prototype table for the Chebyshev filter, defined for $ωₚ=1$, $αₚ=0.5
+        > \text{ dB}$, $ε²=0.122$, $|ρ|ₚ=-9.6 \text{ dB}$:
+        >
+        > | $n$ |   $g₀$   |   $g₁$   |   $g₂$   |   $g₃$   |   $g₄$   |
+        > | :-: | :------: | :------: | :------: | :------: | :------: |
+        > | $1$ | $1.0000$ | $1.5963$ | $1.0967$ | $1.5963$ | $1.0000$ |
+        >
+        > The circuit was modeled in Falstad and the response was measured at the given frequency ($f =
+        > \frac{1}{2π} \text{ Hz}$) and input amplitude $V_g = 1 \text{ V}$, comparing the average
+        > simulated power with the calculated power according to the prototype parameters. We are
+        > expecting to find $P₂$ at the load.
+        >
+        > $$
+        > Pₘₐₓ = \frac{|V_g|²}{8⋅R_g} = 0.125 \text{ [W]} \\
+        > P₂ = Pₘₐₓ ⋅ 10^{-0.5/10} = 0.1114 \text{ [W]}
+        > $$
+        >
+        > As we compare these values to the ones in Figure 1.2.2.b.1, we can see that the filter is
+        > correctly designed.
+        >
+        > [![Figure 1.2.2.b.1](figures/fig1.2.2.b.1_.png)](https://t.ly/Kzkmh)
+        > <p class="caption center">
+        > Figure 1.2.2.b.1: Falstad simulation of the normalized Chebyshev filter at the prototype frequency
+        > </p>
+
         * Denormalise impedances and check that the transfer function does not change. Do the voltages change?
           And the currents?
+
+        > The impedance denormalization was done by applying the following transformation to the circuit in
+        > order to turn the 1 Ω resistors into the desired 50 Ω resistors, using the normalization factor $Rₙ
+        > = 50$.
+        >
+        > $$
+        > \begin{cases}
+        >     R → Rₙ R \\
+        >     L → Rₙ L \\
+        >     C → \tfrac{C}{Rₙ} \\
+        > \end{cases}
+        > $$
+        >
+        > The new values can be seen in the Falstad simulation screenshot (Figure 1.2.2.b.2). The voltages
+        > remain the same, but the currents change, and so does the power. This is expected from impedance
+        > normalization. Furthermore, even if some values change, the power and current ratios remain the
+        > same. We can conclude that **the transfer function stays the same**
+        >
+        > [![Figure 1.2.2.b.2](figures/fig1.2.2.b.2.png)](https://t.ly/NL2we)
+        > <p class="caption center">
+        > Figure 1.2.2.b.2: Falstad simulation of the impedance-denormalized Chebyshev filter
+        > </p>
+
         * Apply the denormalisation on the frequency axis to the circuit, and check that the measurement does
           not change if it is now measured at the corresponding scaled frequency. (Do not forget to reset the
           `Time step size`.) Use a normalization frequency that allows you to meet specifications loosely in
           both the passband and the attenuated band.
+
+        > In order to apply frequency denormalization, we'll use the normalization factor $ωₙ = 1600π \text{
+        > rad/s}$ (for $f = 800 \text{ Hz}$), which is the frequency at which we want the new filter to have
+        > the attenuation that is currently at $ω = 1 \text{ rad/s}$ (attenuation $α = 0.5 \text{ dB}$). The
+        > transformation is as follows:
+        >
+        > $$
+        > \begin{cases}
+        >     L → \frac{L}{ωₙ} \\
+        >     C → \frac{C}{ωₙ} \\
+        > \end{cases}
+        > $$
+        >
+        > As before, the final values can be seen in the Falstad simulation screenshot (Figure 1.2.2.b.3). The
+        > simulation was adjusted to the new frequency, and the response was checked correctly: as seen in the
+        > screenshot, all values are now the same at the target frequency.
+        >
+        > [![Figure 1.2.2.b.3](figures/fig1.2.2.b.3.png)](https://t.ly/Ty-tO)
+        > <p class="caption center">
+        > Figure 1.2.2.b.3: Falstad simulation of the denormalized Chebyshev filter
+        > </p>
 
 3. Use low-pass to high-pass transformation $s = \frac{ω₀²}{p}$ to transform the low pass filter designed in
    the previous section into a high pass filter whose attenuation at $800 \text{ Hz}$ and $1200 \text{ Hz}$
