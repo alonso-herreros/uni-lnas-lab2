@@ -392,9 +392,32 @@ NIA: 100493990
     > low-pass filter at $1200 \text{ Hz}$ (close to $229.63 \text{ μW}$), confirming the correct design of
     > the high-pass filter.
 
-4. Calculate and plot on the specification mask the amplitude response of the original low- pass filter and
+4. Calculate and plot on the specification mask the amplitude response of the original low-pass filter and
    high-pass filters, and the new designed low-pass filter and high-pass filters(to make this plot, use the
    computer procedure you had to prepare in the preliminary work).
+
+    > The plots were made in Python, using the Chebyshev characteristic function and its relation with the
+    > transfer function through Feldtkeller's formula.
+    >
+    > $$
+    > F_c(ω²) = \begin{cases}
+    >     ε² \cos² \left(n \arccos \frac{ω}{ωₙ}\right) & if ω < ωₙ \\
+    >     ε² \cosh² \left(n\, \text{arcosh} \frac{ω}{ωₙ}\right) & if ω > ωₙ
+    > \end{cases} \\
+    > H(ω) = \sqrt{\frac{1}{1+F_c(ω²)}}
+    > $$
+    >
+    > ![Figure 1.2.4.1](figures/fig1.2.4.1.svg)
+    > <p class="caption center">
+    > Figure 1.2.4.1: Specification mask and response of both initial and synthesized low-pass filters
+    > </p>
+    >
+    > For the high-pass filter, the same function was used, but with the transformation $f → \frac{f₀²}{f}$.
+    >
+    > ![Figure 1.2.4.2](figures/fig1.2.4.2.svg)
+    > <p class="caption center">
+    > Figure 1.2.4.2: Specification mask and response of both initial and synthesized high-pass filters
+    > </p>
 
 5. Characterise the designed filters (Low-pass and high-pass) using the circuit simulator, taking measurements
    of the filter response (**only in modulus**) at significant points on the frequency axis. Add the
