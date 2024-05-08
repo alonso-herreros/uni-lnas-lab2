@@ -226,7 +226,7 @@ NIA: 100493990
         > For the low-pass filter, the frequency was found to be $992.36 \text{ Hz}$. The Falstad simulator
         > proved this to be correct, as seen in the following screenshots (link to Falstad in the images).
         >
-        > [![LPF at 992.36 Hz](figures/fig1.2.1.a_dark.png)](https://t.ly/TSJgD)
+        > [![LPF at 992.36 Hz](figures/fig1.2.1.a_.png)](https://t.ly/TSJgD)
         > <p class="caption center">
         > Figure 1.2.1.a: Falstad simulation of the low-pass filter at the theoretically calculated frequency
         > </p>
@@ -238,7 +238,7 @@ NIA: 100493990
         > In the case of the high-pass filter, the frequency was found to be $997.08 \text{ Hz}$. The Falstad
         > simulator showed the following results:
         >
-        > [![HPF at 997.08 Hz](figures/fig1.2.1.b.png)](https://t.ly/O-js5)
+        > [![HPF at 997.08 Hz](figures/fig1.2.1.b_.png)](https://t.ly/O-js5)
         > <p class="caption center">
         > Figure 1.2.1.b: Falstad simulation of the high-pass filter at the theoretically calculated frequency
         > </p>
