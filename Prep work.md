@@ -247,6 +247,20 @@ NIA: 100493990
 
 2. Design the low pass filter whose specification mask you have obtained in the preparatory work.
     * (a) Determine the type and order of the approximation to be used.
+
+        > First, we'll find the selectivity and discrimination factors.
+        > $$
+        > K_S = \frac{f_p}{f_a} = \frac{800}{1200} = \frac{2}{3} \\
+        > K_D = \sqrt{\frac{10^{α_p/10} - 1}{10^{α_a/10} - 1}} = 0.1164
+        > $$
+        >
+        > Now, we'll compare the order required for Butterworth and Chebyshev filters.
+        >
+        > * For Butterworth: $n ≥ \frac{\log(K_D)}{\log(K_S)} = 5.3$
+        > * For Chebyshev: $n ≥ \frac{\cosh⁻¹(\frac{1}{K_D})}{\cosh⁻¹(\frac{1}{K_S})} = 2.95$
+        >
+        > We'll use Chebyshev filter approximation of order $3$.
+
     * (b) Obtain the filter implementation (take screenshots and explain the mesurements at each step):
         * Select a prototype of the tables. Check the prototype response at $\bar{ω} = 1 \text{ rad/s}$. In
           order to display such low frequency signals, you will need to increase the value of the `Time step
