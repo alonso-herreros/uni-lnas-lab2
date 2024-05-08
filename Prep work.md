@@ -287,7 +287,7 @@ NIA: 100493990
         > As we compare these values to the ones in Figure 1.2.2.b.1, we can see that the filter is
         > correctly designed.
         >
-        > [![Figure 1.2.2.b.1](figures/fig1.2.2.b.1_.png)](https://t.ly/Kzkmh)
+        > [![Figure 1.2.2.b.1](figures/fig1.2.2.b.1.png)](https://t.ly/Kzkmh)
         > <p class="caption center">
         > Figure 1.2.2.b.1: Falstad simulation of the normalized Chebyshev filter at the prototype frequency
         > </p>
