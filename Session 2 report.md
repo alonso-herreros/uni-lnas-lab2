@@ -66,6 +66,8 @@ the expected theoretical result.
 > \text{ dB}$ and $30 \text{ dB}$ are approximately $0.1$ and $0.001$ respectively, which is consistent with
 > these measurements. In all cases, the measured values are within the specifications.
 
+<hr class="pagebreak" />
+
 ### 2. PHASE response of the designed bandpass filter
 
 Now make the necessary measurements to obtain the **phase** response, but only of the passband (the center of
@@ -98,6 +100,8 @@ the passband and two more frequency points are enough).
 >
 > No theoretical values were calculated in the preparatory work.
 
+<hr class="pagebreak" />
+
 ### 3. Group delay
 
 Estimate the group delay at the center frequency of the bandpass filter.
@@ -107,17 +111,11 @@ Estimate the group delay at the center frequency of the bandpass filter.
 * [x] Result:
 -->
 
-> The group delay was estimated using the corresponding formula:
->
-> $$
-> τ_d = - \frac{d \arg\{H(ω)\}}{d ω}
-> $$
->
-> In order to find this value at the center of the bandpass filter, two close frequencies were chosen around
-> the center frequency, and the phases were measured using the method described in the previous section. The
-> group delay was then estimated by calculating the slope of the phase response at the center frequency. In
-> order to take more accurate measurements, the measurements were done one at a time, with a time scale
-> allowing for greater resolution, and at around $t = 20 \text{ ms}$
+> The group delay was estimated using an approximation of the corresponding formula, approximating the
+> **derivative of phase as a linear slope**. Two close frequencies were chosen around the target frequency,
+> and the phases were measured using previous method. In order to take more accurate measurements, the
+> measurements were done one at a time, with a time scale allowing for greater resolution, and at around $t =
+> 20 \text{ ms}$
 >
 > ![alt](figures/fig2.2.3.1.png)
 > ![alt](figures/fig2.2.3.2.png)
@@ -137,10 +135,10 @@ Estimate the group delay at the center frequency of the bandpass filter.
 > | $1000$   | $2000 π$    | $-412.0 \text{ μs}$ | $-2.5887$  |
 > -->
 >
-> With these values, we can take use the following modified formula to calculate the group delay:
+> With these values, we can take use the following approximation formula to calculate the group delay:
 >
 > $$
-> \boxed{τ_d ≈ \frac{φ₂ - φ₁}{ω₂ - ω₁} = -7.884 ⋅ 10^{-4} \text{ s}}
+> \boxed{τ_d = - \frac{d \arg\{H(ω)\}}{d ω} ≈ -\frac{φ₂ - φ₁}{ω₂ - ω₁} = -7.884 ⋅ 10^{-4} \text{ s}}
 > $$
 
 ### 4. Effect of noise WITHOUT the bandpass filter
@@ -198,6 +196,8 @@ circuit for this [link](https://tinyurl.com/29qgxltj)):
     > be higher.
 
 NOTE: Try to explain the different noise levels obtained
+
+<hr class="pagebreak" />
 
 ### 5. Effect of noise WITH the bandpass filter
 Now add the band pass filter to the system (complete the circuit of this
