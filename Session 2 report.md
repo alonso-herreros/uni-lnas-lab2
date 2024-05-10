@@ -208,14 +208,55 @@ Now add the band pass filter to the system (complete the circuit of this
   screenshot(s) here Results and explanations/comments
 
     <!--
-    * [ ] Insert screenshot(s) here
-    * [ ] Result and explanation/comment
+    * [x] Insert screenshot(s) here
+    * [x] Result and explanation/comment
     -->
+
+The delay of the received signal was measured with respect to a rising edge of the binary signal at $t = 30
+\text{ ms}$, overlaying the plots of the transmitted and received signals, and measuring the time difference.
+
+[![alt](figures/fig2.2.5.1.png)](https://tinyurl.com/2dq2m9c4)
+
+The difference came out to be $2.415 \text{ ms}$. Without the bandpass filter, the delay was about $1.4 \text{
+ms}$. Since the group delay of the filter was estimated to be $0.7884 \text{ ms}$, the total delay of the
+system should be about $τ_{prev} + τ_{BPF} = (1.4 + 0.788)  \text{ ms} = 2.188 \text{ ms}$, which is close to
+the measured value. This difference is likely due to the fact that the group delay was estimated at the center
+frequency of the bandpass filter, not at either of the two frequencies used in the transmission.
+
+<!---
+f1 = 799
+f2 = 801
+t1 = 0.444e-3
+t2 = 0.4208e-3
+
+ω1 = 799*2*pi
+ω2 = 801*2*pi
+
+φ1 = ω1*t1
+φ2 = ω2*t2
+
+τ = -(φ2 - φ1)/(ω2 - ω1)
+1.28e-3 + 7.884e-4
+-->
 
 * Repeat section 4 and compare the results. Draw conclusions about the effectiveness of the bandpass filter in
   limiting the effect of noise. Insert screenshot(s) here Results and explanations/comments
 
     <!--
-    * [ ] Insert screenshot(s) here
-    * [ ] Result and explanation/comment
+    * [x] Insert screenshot(s) here
+    * [x] Result and explanation/comment
     -->
+
+    > After adding the bandpass filter, the signal was still almost perfectly recoverable at a peak noise
+    > voltage of $5 \text{ V}$, which is a significant improvement over the previous case (about 10 times
+    > better).
+    >
+    > [![alt](figures/fig2.2.5.2.png)](https://tinyurl.com/278ntrrv)
+    >
+    > At $10 \text{ V}$, however, the output signal was very erratic and had almost no trace of the original
+    > signal left.
+    >
+    > [![alt](figures/fig2.2.5.3.png)](https://tinyurl.com/2blhympn)
+    >
+    > The bandpass filter was clearly effective in limiting the effect of noise, as it allowed for a much
+    > higher noise level to be present in the system while still being able to recover the transmitted signal.
