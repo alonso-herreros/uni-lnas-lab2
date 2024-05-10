@@ -157,7 +157,7 @@ circuit for this [link](https://tinyurl.com/29qgxltj)):
     * [ ] Result and explanation/comment
     -->
 
-    * Suppose now that you use the envelope of the output of the high pass filter to determine the symbol that
+* Suppose now that you use the envelope of the output of the high pass filter to determine the symbol that
   arrives at it (node `P1`). What would be the maximum noise level at which it would be possible to recover,
   with few errors, the transmitted data?
 
@@ -166,7 +166,7 @@ circuit for this [link](https://tinyurl.com/29qgxltj)):
     * [ ] Result and explanation/comment
     -->
 
-    * Suppose now that you use the envelope of the output of the low-pass filter to determine the symbol that
+* Suppose now that you use the envelope of the output of the low-pass filter to determine the symbol that
   arrives at it (node P2). What would be the maximum noise level at which it would be possible to recover,
   with few errors, the transmitted data?
 
@@ -175,7 +175,7 @@ circuit for this [link](https://tinyurl.com/29qgxltj)):
     * [ ] Result and explanation/comment
     -->
 
-    NOTE: Try to explain the different noise levels obtained
+NOTE: Try to explain the different noise levels obtained
 
 ### 5. Effect of noise WITH the bandpass filter
 Now add the band pass filter to the system (complete the circuit of this
