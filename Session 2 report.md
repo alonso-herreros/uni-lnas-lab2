@@ -103,9 +103,45 @@ the passband and two more frequency points are enough).
 Estimate the group delay at the center frequency of the bandpass filter.
 
 <!--
-* [ ] Explain the estimation/measurement method
-* [ ] Result:
+* [x] Explain the estimation/measurement method
+* [x] Result:
 -->
+
+> The group delay was estimated using the corresponding formula:
+>
+> $$
+> τ_d = - \frac{d \arg\{H(ω)\}}{d ω}
+> $$
+>
+> In order to find this value at the center of the bandpass filter, two close frequencies were chosen around
+> the center frequency, and the phases were measured using the method described in the previous section. The
+> group delay was then estimated by calculating the slope of the phase response at the center frequency. In
+> order to take more accurate measurements, the measurements were done one at a time, with a time scale
+> allowing for greater resolution, and at around $t = 20 \text{ ms}$
+>
+> ![alt](figures/fig2.2.3.1.png)
+> ![alt](figures/fig2.2.3.2.png)
+>
+> ![alt](figures/fig2.2.3.5.png)
+> ![alt](figures/fig2.2.3.6.png)
+>
+>
+> | $f$ (Hz) | $ω$ (rad/s)   | $Δt$ (s)            | $Δφ$ (rad) |
+> | :------- | :------------ | :------------------ | :--------: |
+> | $999$    | $ω₁ = 1998 π$ | $-412.8 \text{ μs}$ | $-2.5911$  |
+> | $1001$   | $ω₂ = 2002 π$ | $-410.4 \text{ μs}$ | $-2.5812$  |
+>
+> <!-- Middle measurement, not used
+> ![alt](figures/fig2.2.3.3.png)
+> ![alt](figures/fig2.2.3.4.png)
+> | $1000$   | $2000 π$    | $-412.0 \text{ μs}$ | $-2.5887$  |
+> -->
+>
+> With these values, we can take use the following modified formula to calculate the group delay:
+>
+> $$
+> \boxed{τ_d ≈ \frac{φ₂ - φ₁}{ω₂ - ω₁} = -7.884 ⋅ 10^{-4} \text{ s}}
+> $$
 
 ### 4. Effect of noise WITHOUT the bandpass filter
 
