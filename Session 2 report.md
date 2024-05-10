@@ -94,7 +94,7 @@ the passband and two more frequency points are enough).
 > | :------- | :----------------- | :---------------- | :--------: |
 > | $600$    | $1.667 \text{ ms}$ | $-132 \text{ μs}$ |  $-0.498$  |
 > | $1000$   | $1 \text{ ms}$     | $-409 \text{ μs}$ |  $-2.551$  |
-> | $14000$  | $714.3 \text{ ms}$ | $53 \text{ μs}$   |  $0.466$   |
+> | $14000$  | $714.3 \text{ μs}$ | $53 \text{ μs}$   |  $0.466$   |
 >
 > No theoretical values were calculated in the preparatory work.
 
