@@ -212,16 +212,18 @@ Now add the band pass filter to the system (complete the circuit of this
     * [x] Result and explanation/comment
     -->
 
-The delay of the received signal was measured with respect to a rising edge of the binary signal at $t = 30
-\text{ ms}$, overlaying the plots of the transmitted and received signals, and measuring the time difference.
-
-[![alt](figures/fig2.2.5.1.png)](https://tinyurl.com/2dq2m9c4)
-
-The difference came out to be $2.415 \text{ ms}$. Without the bandpass filter, the delay was about $1.4 \text{
-ms}$. Since the group delay of the filter was estimated to be $0.7884 \text{ ms}$, the total delay of the
-system should be about $τ_{prev} + τ_{BPF} = (1.4 + 0.788)  \text{ ms} = 2.188 \text{ ms}$, which is close to
-the measured value. This difference is likely due to the fact that the group delay was estimated at the center
-frequency of the bandpass filter, not at either of the two frequencies used in the transmission.
+    > The delay of the received signal was measured with respect to a rising edge of the binary signal at $t =
+    > 30 \text{ ms}$, overlaying the plots of the transmitted and received signals, and measuring the time
+    > difference.
+    >
+    > [![alt](figures/fig2.2.5.1.png)](https://tinyurl.com/2dq2m9c4)
+    >
+    > The difference came out to be $2.415 \text{ ms}$. Without the bandpass filter, the delay was about $1.4
+    > \text{ ms}$. Since the group delay of the filter was estimated to be $0.7884 \text{ ms}$, the total
+    > delay of the system should be about $τ_{prev} + τ_{BPF} = (1.4 + 0.788) \text{ ms} = 2.188 \text{ ms}$,
+    > which is close to the measured value. This difference is likely due to the fact that the group delay was
+    > estimated at the center frequency of the bandpass filter, not at either of the two frequencies used in
+    > the transmission.
 
 <!---
 f1 = 799
