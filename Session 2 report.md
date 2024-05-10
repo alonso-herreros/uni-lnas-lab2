@@ -72,10 +72,31 @@ Now make the necessary measurements to obtain the **phase** response, but only o
 the passband and two more frequency points are enough).
 
 <!--
-* [ ] Insert screenshot(s) here
-* [ ] Results, explanations and comments
-* [ ] Table/graph of measurements and theoretical values
+* [x] Insert screenshot(s) here
+* [x] Results, explanations and comments
+* [x] Table/graph of measurements and theoretical values
 -->
+
+> Measurements were taken 3 at once, taking the point $t = 10 \text{ ms}$ as a reference, since all 3 input
+> signals crossed the horizontal axis at this point. The input and output voltages were overlapped in the
+> scopes to better measure the phase difference, and inspected by hovering the mouse at the points where the
+> output signals cross the horizontal axis.
+>
+> [![alt text](figures/fig2.2.2.1.png)](https://tinyurl.com/267ef3et)
+>
+> After tabulating the time differences, the phase differences were calculated using the formula:
+>
+> $$
+> Δφ = 2πfΔt
+> $$
+>
+> | $f$ (Hz) | $T$ (s)            | $Δt$ (s)          | $Δφ$ (rad) |
+> | :------- | :----------------- | :---------------- | :--------: |
+> | $600$    | $1.667 \text{ ms}$ | $-132 \text{ μs}$ |  $-0.498$  |
+> | $1000$   | $1 \text{ ms}$     | $-409 \text{ μs}$ |  $-2.551$  |
+> | $14000$  | $714.3 \text{ ms}$ | $53 \text{ μs}$   |  $0.466$   |
+>
+> No theoretical values were calculated in the preparatory work.
 
 ### 3. Group delay
 
