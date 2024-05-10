@@ -37,11 +37,34 @@ verify that the filter response in amplitude meets the specifications. Compare t
 the expected theoretical result.
 
 <!--
-* [ ] Insert screenshot(s) here 
-* [ ] Results, explanations and comments
-* [ ] Table/graph of measurements and theoretical values
-* [ ] Optional: Insert link to the designed circuit in Falstad (this can be done in all answers)
+* [x] Insert screenshot(s) here 
+* [x] Results, explanations and comments
+* [x] Table/graph of measurements and thxoretical values
+* [x] Optional: Insert link to the designed circuit in Falstad (this can be done in all answers)
 -->
+
+> 9 different frequencies were tested at once, captured, tabulated and processed to get the amplitude response
+> of the bandpass filter.
+>
+> [![alt text](figures/fig2.2.1.1.png)](https://tinyurl.com/2bksgwgt)
+>
+> Table:
+>
+> | $f$ (Hz) |       $V (V)$        | $H$ (V/V) |
+> | :------: | :------------------: | :-------: |
+> | $100.0$  | $10.962 \text{ μV}$  | $0.0000$  |
+> | $200.0$  | $209.645 \text{ μV}$ | $0.0006$  |
+> | $400.0$  |  $7.854 \text{ mV}$  |  $0.02$   |
+> | $600.0$  | $334.722 \text{ mV}$ |  $0.94$   |
+> | $1000.0$ | $344.907 \text{ mV}$ |  $0.97$   |
+> | $1400.0$ | $333.907 \text{ mV}$ |  $0.94$   |
+> | $1600.0$ | $77.761 \text{ mV}$  |  $0.22$   |
+> | $1800.0$ | $24.844 \text{ mV}$  |  $0.07$   |
+> | $1900.0$ | $16.086 \text{ mV}$  |  $0.05$   |
+>
+> This is as expected. A loss of 0.5 dB corresponds to a factor of about $0.89$, while the attenuations of $20
+> \text{ dB}$ and $30 \text{ dB}$ are approximately $0.1$ and $0.001$ respectively, which is consistent with
+> these measurements. In all cases, the measured values are within the specifications.
 
 ### 2. PHASE response of the designed bandpass filter
 
