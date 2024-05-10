@@ -153,27 +153,49 @@ circuit for this [link](https://tinyurl.com/29qgxltj)):
   the signal is no longer correctly detected at the node `RX signal`.
 
     <!--
-    * [ ] Insert screenshot(s) here
-    * [ ] Result and explanation/comment
+    * [x] Insert screenshot(s) here
+    * [x] Result and explanation/comment
     -->
+
+    > At approximately $460 \text{ mV}$ of peak noise voltage, the signal starts to be detected incorrectly.
+    > It may still be recoverable, but it's not reliable anymore at this point.
+    >
+    > [![alt text](figures/fig2.2.4.1.png)](https://tinyurl.com/27gcoycg)
 
 * Suppose now that you use the envelope of the output of the high pass filter to determine the symbol that
   arrives at it (node `P1`). What would be the maximum noise level at which it would be possible to recover,
   with few errors, the transmitted data?
 
     <!--
-    * [ ] Insert screenshot(s) here
-    * [ ] Result and explanation/comment
+    * [x] Insert screenshot(s) here
+    * [x] Result and explanation/comment
     -->
+
+    > It's difficult to determine an exact value by just looking at the plot, but at a peak noise voltage of
+    > about $400 \text{ mV}$, the signal looks very noisy, and I doubt we'd be able to accurately recover the
+    > transmitted signal.
+    >
+    > [![alt text](figures/fig2.2.4.2.png)](https://tinyurl.com/25td4zd6)
 
 * Suppose now that you use the envelope of the output of the low-pass filter to determine the symbol that
   arrives at it (node P2). What would be the maximum noise level at which it would be possible to recover,
   with few errors, the transmitted data?
 
     <!--
-    * [ ] Insert screenshot(s) here
-    * [ ] Result and explanation/comment
+    * [x] Insert screenshot(s) here
+    * [x] Result and explanation/comment
     -->
+
+    > In this case, the signal at node `P2` looks recoverable even at a peak noise voltage of $1.24 \text{ V}$
+    >
+    > [![alt text](figures/fig2.2.4.3.png)](https://tinyurl.com/2ag2xpq9)
+    >
+    > I suspect this could be due to the fact that the noise generated, being White Gaussian noise, has
+    > uniform Power Spectral Density, meaning its power is distributed uniformly across all frequencies. Since
+    > the Low-Pass filter lets low frequencies pass, its pass-band is *limited*, and high frequencies, which
+    > are unlimited are attenuated greatly. In contrast, the High-Pass filter cuts off the low frequencies,
+    > and its pass-band is *unlimited*, going up to infinity, meaning the power of noise that gets through may
+    > be higher.
 
 NOTE: Try to explain the different noise levels obtained
 
